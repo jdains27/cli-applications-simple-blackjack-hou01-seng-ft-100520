@@ -38,7 +38,20 @@ end
 
 def hit?(card_total)
   # code hit? here
-  if get_user_input
+  prompt_user
+  command = get_user_input
+  if ['h','s'].find_index(command)
+    if command == 'h'
+      card = deal_card
+      card_total += card
+    end
+    if command == 's'
+    end
+  else
+    invalid_command
+    hit?(card_total)
+  end
+  card_total
 end
 
 def invalid_command
