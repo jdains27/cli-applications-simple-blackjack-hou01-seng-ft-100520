@@ -36,8 +36,9 @@ def initial_round
   sum = card1 + card2
 end
 
-def hit(number)
+def hit?(card_total)
   # code hit? here
+  if get_user_input
 end
 
 def invalid_command
